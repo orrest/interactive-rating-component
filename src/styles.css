@@ -1,4 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400..700;1,400..700&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --color-grey-950: #131518;
+  --color-grey-900: #262e38;
+  --color-grey-500: #969fad;
+  --color-orange-500: #fc7614;
+
+  --text-preset-1: 28px;
+  --text-preset-1--line-height: 35px;
+  --text-preset-1--letter-spacing: 0;
+  --text-preset-1--font-weight: 700;
+
+  --text-preset-2: 24px;
+  --text-preset-2--line-height: 30px;
+  --text-preset-2--letter-spacing: 0;
+  --text-preset-2--font-weight: 700;
+
+  --text-preset-3: 16px;
+  --text-preset-3--line-height: 24px;
+  --text-preset-3--letter-spacing: 0.2px;
+  --text-preset-3--font-weight: 700;
+
+  --text-preset-4-bold: 15px;
+  --text-preset-4-bold--line-height: 19px;
+  --text-preset-4-bold--letter-spacing: 2px;
+  --text-preset-4-bold--font-weight: 700;
+
+  --text-preset-4-regular: 15px;
+  --text-preset-4-regular--line-height: 24px;
+  --text-preset-4-regular--letter-spacing: 0;
+  --text-preset-4-regular--font-weight: 400;
+
+  --text-preset-5-bold: 14px;
+  --text-preset-5-bold--line-height: 18px;
+  --text-preset-5-bold--letter-spacing: 1.87px;
+  --text-preset-5-bold--font-weight: 700;
+
+  --text-preset-5-semibold: 14px;
+  --text-preset-5-semibold--line-height: 24px;
+  --text-preset-5-semibold--letter-spacing: 0.17px;
+  --text-preset-5-semibold--font-weight: 600;
+
+  --text-preset-5-regular: 14px;
+  --text-preset-5-regular--line-height: 22px;
+  --text-preset-5-regular--letter-spacing: 0;
+  --text-preset-5-regular--font-weight: 400;
+}
 
 @layer base {
   /* Box sizing rules */
@@ -6,6 +55,7 @@
   *::before,
   *::after {
     box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
   }
 
   /* Prevent font size inflation */
