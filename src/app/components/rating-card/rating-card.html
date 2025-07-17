@@ -1,0 +1,47 @@
+<article
+  class="flex flex-col bg-radial-[at_0%_100%] from-[#232A34] to-[#181E27] p-6 rounded-2xl max-w-[327px] gap-6 md:rounded-4xl md:max-w-[412px] md:gap-8"
+>
+  <header>
+    <span class="circle-content bg-grey-900">
+      <img
+        src="./assets/icon-star.svg"
+        width="17"
+        height="16"
+        alt="icon start"
+      />
+    </span>
+  </header>
+
+  <section class="flex flex-col gap-4">
+    <h1 class="text-preset-2 text-white md:text-preset-1">How did we do?</h1>
+    <p class="text-grey-500 text-preset-5-regular md:text-preset-4-regular">
+      Please let us know how we did with your support request. All feedback is
+      appreciated to help us improve our offering!
+    </p>
+    <div class="flex flex-row justify-between">
+      @for (rating of vm(); track $index) {
+        <span
+          class="circle-content text-preset-5-bold hover:bg-white hover:cursor-pointer md:text-preset-3"
+          (click)="onRatingClick(rating)"
+          [ngClass]="{
+            'text-grey-500': !rating.selected,
+            'bg-grey-900': !rating.selected,
+            'bg-orange-500': rating.selected,
+            'text-grey-900': rating.selected,
+          }"
+        >
+          {{ rating.star }}
+        </span>
+      }
+    </div>
+  </section>
+
+  <section>
+    <button
+      class="bg-orange-500 text-grey-950 p-4 rounded-full text-preset-5-bold w-full hover:bg-white hover:cursor-pointer md:text-preset-5-semibold"
+      (click)="submit()"
+    >
+      SUBMIT
+    </button>
+  </section>
+</article>

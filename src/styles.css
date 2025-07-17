@@ -142,3 +142,9 @@
     scroll-margin-block: 5ex;
   }
 }
+
+@layer utilities {
+  .circle-content {
+    @apply rounded-full size-[42px] md:size-[51px] flex items-center justify-center;
+  }
+}
