@@ -1,5 +1,7 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { Service } from '../../services/service';
+import { Router } from '@angular/router';
 
 interface RatingVm {
   star: number;
@@ -13,6 +15,9 @@ interface RatingVm {
   styleUrl: './rating-card.css',
 })
 export class RatingCard {
+  private service = inject(Service);
+  private router = inject(Router);
+
   vm = signal<RatingVm[] | undefined>(undefined);
   selectedStar = computed(() => this.vm()!.find((v) => v.selected));
 
@@ -53,5 +58,14 @@ export class RatingCard {
     if (!selected) {
       return;
     }
+
+    console.log(selected);
+
+    this.service.nextStar({
+      star: selected.star,
+      total: this.vm()!.length,
+    });
+
+    this.router.navigateByUrl('/thanks');
   }
 }

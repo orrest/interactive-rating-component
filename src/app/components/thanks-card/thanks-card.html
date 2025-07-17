@@ -1,0 +1,33 @@
+<article
+  class="card max-w-[327px] md:max-w-[412px] flex flex-col items-center gap-6 px-6 py-8 md:px-8 md:py-10 md:gap-8"
+>
+  <img
+    class="w-36 md:w-auto"
+    ngSrc="./assets/illustration-thank-you.svg"
+    width="162"
+    height="108"
+    alt="thank you"
+    priority
+  />
+
+  @if (star$ | async; as star) {
+    <div class="bg-grey-900 px-4 rounded-full py-1">
+      <span
+        class="text-preset-5-regular text-orange-500 md:text-preset-4-regular"
+      >
+        You selected {{ star.star }} out of {{ star.total }}
+      </span>
+    </div>
+  }
+
+  <section class="flex flex-col gap-4 items-center">
+    <h1 class="text-preset-2 text-white md:text-preset-1">Thank you!</h1>
+
+    <p
+      class="text-preset-5-regular text-grey-500 text-center md:text-preset-4-regular"
+    >
+      We appreciate you taking the time to give a rating. If you ever need more
+      support, don’t hesitate to get in touch!
+    </p>
+  </section>
+</article>

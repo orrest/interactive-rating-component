@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RatingCard } from './components/rating-card/rating-card';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RatingCard],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
