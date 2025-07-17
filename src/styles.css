@@ -147,4 +147,8 @@
   .circle-content {
     @apply rounded-full size-[42px] md:size-[51px] flex items-center justify-center;
   }
+
+  .card {
+    @apply bg-radial-[at_0%_100%] from-[#232A34] to-[#181E27] p-6 rounded-2xl md:rounded-4xl;
+  }
 }
