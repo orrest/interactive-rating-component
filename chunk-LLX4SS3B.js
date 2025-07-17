@@ -1,0 +1,1 @@
+import{H as e,J as o,i as a}from"./chunk-5MXCFXEW.js";var i=class r{star=new a({star:0,total:0});star$=this.star.asObservable().pipe(e(t=>console.log(t)));nextStar(t){this.star.next(t)}static \u0275fac=function(n){return new(n||r)};static \u0275prov=o({token:r,factory:r.\u0275fac,providedIn:"root"})};export{i as a};
